@@ -1,4 +1,5 @@
-﻿using IPA;
+﻿using System.Diagnostics;
+using IPA;
 using IPA.Logging;
 
 namespace SimplePriority
@@ -25,6 +26,18 @@ namespace SimplePriority
         public SimplePriority(Logger logger)
         {
             Log = logger;
+        }
+        
+        #endregion
+        
+        #region Tools
+
+        internal static void SetPriority(ProcessPriorityClass priority)
+        {
+            Log.Info($"Setting Priority to {priority}...");
+            Process process = Process.GetCurrentProcess();
+            process.PriorityClass = priority;
+            Log.Info($"Process Priority set to {priority}!");
         }
         
         #endregion
