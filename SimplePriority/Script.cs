@@ -53,6 +53,7 @@ namespace SimplePriority
         [OnStart]
         public void OnStart()
         {
+            SetPriority(Configuration.Instance.Priority);
         }
         /// <summary>
         /// Function triggered when the game is exiting.
