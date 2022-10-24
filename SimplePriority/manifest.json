@@ -1,0 +1,18 @@
+﻿{
+    "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+    "author": "Lemon-chan",
+    "description": [
+        "Simple Mod to change the Game's Process priority automatically when the game starts."
+    ],
+    "gameVersion": "1.25.1",
+    "id": "SimplePriority",
+    "name": "SimplePriority",
+    "version": "1.0.0",
+    "links": {
+        "project-source": "https://github.com/justalemon/SimplePriority",
+        "donate": "https://patreon.com/lemonchan"
+    },
+    "dependsOn": {
+        "BSIPA": "^4.2.2"
+    }
+}
