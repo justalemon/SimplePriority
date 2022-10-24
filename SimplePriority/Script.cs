@@ -21,6 +21,7 @@ namespace SimplePriority
         /// Creates a new instance of the logger mod.
         /// </summary>
         /// <param name="logger">The logger mod.</param>
+        [Init]
         public SimplePriority(Logger logger)
         {
             Log = logger;
