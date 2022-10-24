@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using BeatSaberMarkupLanguage.Settings;
 using IPA;
 using IPA.Config;
 using IPA.Config.Stores;
@@ -53,6 +54,7 @@ namespace SimplePriority
         [OnStart]
         public void OnStart()
         {
+            BSMLSettings.instance.AddSettingsMenu(nameof(SimplePriority), "SimplePriority.settings.bsml", new SettingsChanged());
             SetPriority(Configuration.Instance.Priority);
         }
         /// <summary>
