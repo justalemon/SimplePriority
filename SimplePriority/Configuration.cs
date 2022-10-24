@@ -23,11 +23,6 @@ namespace SimplePriority
         
         #region Functions
 
-        protected virtual void OnReload()
-        {
-            SimplePriority.Log.Info("Configuration reloaded, reapplying Process Priority...");
-            SimplePriority.SetPriority(Instance.Priority);
-        }
         protected virtual void Changed()
         {
             SimplePriority.Log.Info("Configuration changed, reapplying Process Priority...");
