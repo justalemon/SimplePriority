@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 using IPA;
+using IPA.Config;
+using IPA.Config.Stores;
 using IPA.Logging;
 
 namespace SimplePriority
@@ -13,7 +15,7 @@ namespace SimplePriority
         /// The main logger.
         /// </summary>
         public static Logger Log { get; private set; }
-        
+
         #endregion
         
         #region Constructors
@@ -23,9 +25,10 @@ namespace SimplePriority
         /// </summary>
         /// <param name="logger">The logger mod.</param>
         [Init]
-        public SimplePriority(Logger logger)
+        public SimplePriority(Logger logger, Config config)
         {
             Log = logger;
+            Configuration.Instance = config.Generated<Configuration>();
         }
         
         #endregion
