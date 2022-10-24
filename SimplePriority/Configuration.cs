@@ -25,6 +25,11 @@ namespace SimplePriority
 
         protected virtual void Changed()
         {
+            if (Instance == null)
+            {
+                return;
+            }
+            
             SimplePriority.Log.Info("Configuration changed, reapplying Process Priority...");
             SimplePriority.SetPriority(Instance.Priority);
         }
