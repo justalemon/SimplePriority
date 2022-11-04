@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Unity3D" Version="2.0.1" />
     <Reference Include="BSML">
       <HintPath>F:\Steam\steamapps\common\Beat Saber\Plugins\BSML.dll</HintPath>
       <Private>False</Private>
@@ -18,8 +19,9 @@
       <HintPath>F:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\IPA.Loader.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Remove="$(UnityEnginePath)" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>F:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(UnityModulesPath)\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <EmbeddedResource Include="manifest.json" />
