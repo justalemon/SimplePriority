@@ -5,8 +5,8 @@
 
 $global:ProgressPreference = "SilentlyContinue"
 
-$bsipa_path = "sdk\\bsipa"
-$bsml_path = "sdk\\bsml"
+$bsipa_path = "sdk\\BSIPA"
+$bsml_path = "sdk\\BeatSaberMarkupLanguage"
 
 function Get-AndInstall {
     param (
