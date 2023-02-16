@@ -28,4 +28,8 @@
     <EmbeddedResource Include="settings.bsml" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="powershell -Command &quot;Set-Location '$(ProjectDir)..\'; .\sdk\download.ps1 -BSIPAVersion 4.2.2 -BSMLVersion 1.6.8&quot;" />
+  </Target>
+
 </Project>
