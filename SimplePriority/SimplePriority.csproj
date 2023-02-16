@@ -12,11 +12,11 @@
   <ItemGroup>
     <PackageReference Include="Unity3D" Version="2.0.1" />
     <Reference Include="BSML">
-      <HintPath>F:\Steam\steamapps\common\Beat Saber\Plugins\BSML.dll</HintPath>
+      <HintPath>$(ProjectDir)..\sdk\BeatSaberMarkupLanguage\Plugins\BSML.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="IPA.Loader">
-      <HintPath>F:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\IPA.Loader.dll</HintPath>
+      <HintPath>$(ProjectDir)..\sdk\BSIPA\IPA\Data\Managed\IPA.Loader.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Remove="$(UnityEnginePath)" />
